@@ -1,0 +1,16 @@
+{
+  "name": "chrometester",
+  "version": "1.0.0",
+  "description": "Hits a livekit ",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+
+  "license": "ISC",
+  "dependencies": {
+    "livekit-server-api": "^0.4.3",
+    "puppeteer": "^10.0.0"
+  }
+}
