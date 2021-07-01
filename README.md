@@ -17,7 +17,7 @@ The following environment vars are supported:
 
 ## Kubernetes Example
 
-To use it on Kubernetes, you'll need a deployment like the following
+To use it on Kubernetes, you'll need a deployment like the following. Note, each instance of the load tester uses approximately 200-500m CPU units and 100MB memory.
 
 ```yaml
 apiVersion: apps/v1
