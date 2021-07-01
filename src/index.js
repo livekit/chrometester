@@ -9,7 +9,7 @@ const lkapi = require('livekit-server-api');
   let roomName = process.env.LIVEKIT_ROOM
   let testerMinutes = parseInt(process.env.DURATION)
   if (!testerMinutes) {
-    testerMinutes = 3
+    testerMinutes = 30
   }
 
   const identity = `${identityPrefix}${Math.floor(Math.random() * 10000)}`
