@@ -10,7 +10,7 @@
 
   "license": "ISC",
   "dependencies": {
-    "livekit-server-api": "^0.4.3",
+    "livekit-server-sdk": "^0.4.6",
     "puppeteer": "^10.0.0"
   }
 }
