@@ -14,6 +14,8 @@ The following environment vars are supported:
 - LIVEKIT_ROOM: the room to join
 - DURATION: (optional) amount of time to stay in the room before existing
 - LIVEKIT_IDENTITY_PREFIX: (optional) custom name prefix for the simulated subscriber
+- ENABLE_PUBLISH: (optional) enables a simulated publisher with audio and video
+- TABS: (optional) number of simultanious room connections
 
 ## Kubernetes Example
 
@@ -49,4 +51,8 @@ spec:
           value: <yourhost>
         - name: LIVEKIT_ROOM
           value: <roomname>
+        - name: ENABLE_PUBLISH
+          value: "true"
+        - name: TABS
+          value: "1"
 ```
