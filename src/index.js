@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const lkapi = require('livekit-server-api');
+const lkapi = require('livekit-server-sdk');
 
 (async () => {
   let identityPrefix = process.env.LIVEKIT_IDENTITY_PREFIX
@@ -31,6 +31,7 @@ const lkapi = require('livekit-server-api');
       "--no-sandbox",
       "--use-gl=swiftshader",
       "--disable-dev-shm-usage",
+      "--use-fake-ui-for-media-stream",
     ]
   });
   const page = await browser.newPage();
