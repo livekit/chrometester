@@ -26,6 +26,7 @@ const lkapi = require('livekit-server-sdk');
 
   const browser = await puppeteer.launch({
     headless: true,
+    dumpio: true,
     args: [
       "--disable-gpu",
       "--no-sandbox",
@@ -51,6 +52,15 @@ const lkapi = require('livekit-server-sdk');
 
     const url = `https://example.livekit.io/#/room?url=${encodeURIComponent(process.env.LIVEKIT_HOST)}&token=${at.toJwt()}&videoEnabled=${enablePublish}&audioEnabled=${enablePublish}&simulcast=${enablePublish}`
     const page = await browser.newPage();
+    page
+      .on('console', message =>
+        console.log(`${message.type().substr(0, 3).toUpperCase()} ${message.text()}`))
+      .on('pageerror', ({ message }) => console.log(message))
+      .on('response', response =>
+        console.log(`${response.status()} ${response.url()}`))
+      .on('requestfailed', request =>
+        console.log(`${request.failure().errorText} ${request.url()}`))
+      
     await page.setViewport({
       width: 1000,
       height: 700
