@@ -26,7 +26,7 @@ const lkapi = require('livekit-server-sdk');
 
   const browser = await puppeteer.launch({
     headless: true,
-    dumpio: true,
+    // dumpio: true,
     args: [
       "--disable-gpu",
       "--no-sandbox",

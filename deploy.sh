@@ -1,4 +1,4 @@
-VERSION=3
+VERSION=4
 
 docker build . -t livekit/chrometester:latest
 docker push livekit/chrometester:latest
