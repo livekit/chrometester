@@ -2,6 +2,10 @@
 
 A headless chrome image for simulating LiveKit subscribers.
 
+## Deprecation notice
+
+This repo is no longer maintained. We no longer recommend using Chrome testers to simulate traffic to LiveKit.
+
 ## Usage
 
 It's designed to be used as a Docker image, by passing a few environment variables, ChromeTester will load https://example.livekit.io with parameters that will let it join a room as a subscriber.
